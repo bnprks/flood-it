@@ -33,7 +33,7 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/flood_it.js"
+                :compiler {:output-to "resources/public/js/compiled/flood_it.min.js"
                            :main flood-it.core
                            :optimizations :advanced
                            :pretty-print false}}]}

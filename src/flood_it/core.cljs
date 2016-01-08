@@ -132,10 +132,11 @@
                           ^{:key y} [cell (get-in board [x y])])])])
 
 (defn controls
-  [colors]
+  [colors finished]
   [:div.controls {:style {:width (* colors 35)}}
       (for [i (range colors)]
-         ^{:key i} [:span.control {:style {:background-color (get color-map i)}
+         ^{:key i} [:span.control {:style {:background-color (get color-map i)
+                                           :cursor (if-not finished "pointer" "initial")}
                                    :on-click #(dispatch [:flood i])}])])
 
 (defn new-game [] [:button {:on-click #(dispatch [:new-game])} "New Game"])
@@ -159,10 +160,11 @@
               [:div.col-left [game-end-msg @board @moves]]
               [:div.col-middle
                 [grid @board @size]
-                [:br] [controls @colors]
-                [:p "Flood the board until everything is the same color.
-                     You start in the top left and can grow your blob by clicking
-                     on the row of color controls.
+                [:br] [controls @colors (win-state {:board @board :moves @moves})]
+                [:p {:style {:text-align "left"}} "Flood the board until everything is the same color.
+                     Your blob starts in the top left corner of the board, and you can grow
+                     by matching the color of the surrounding squares.
+                     Click one of the boxes in the color palette to get started.
                      Try to make it in uder 25 moves!"]
                 [:p [:small "This is not my original game idea. It is a blatant
                   rip-off of the game Flood-It! by Lab Pixes available on "]
