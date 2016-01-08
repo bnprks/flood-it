@@ -1,0 +1,125 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #FFF;
+  color: #000;
+}
+
+
+h1 {
+	font-weight: 300;
+	font-size: 40px;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 2em;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+div.game {
+  text-align: center;
+}
+
+div.col-right h2 {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+div.col-left h2 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+h2.win-msg {
+  border-bottom: #7e8d1e 2px solid;
+}
+
+h2.loss-msg {
+  border-bottom: #dc4a20 2px solid;
+}
+
+div.col-right {
+  width:33%;
+  float: right;
+  min-height: 1px;
+  text-align: left;
+}
+
+div.col-middle {
+  width: 33%;
+  display: inline-block;
+  min-height: 1px
+}
+
+div.col-left {
+  width:33%;
+  float: left;
+  min-height:1px;
+  text-align: right;
+}
+
+@media all and (max-width: 900px) {
+  div.col-right {
+    width: 20%;
+  }
+  div.col-middle {
+    width: 60%;
+  }
+  div.col-left {
+    width: 20%;
+  }
+}
+
+@media all and (max-width: 680px) {
+  div.col-right {
+    width: 100%;
+    float:none;
+    text-align: center;
+  }
+  div.col-middle {
+    width: 100%;
+  }
+  div.col-left {
+    width: 100%;
+    float:none;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+}
+
+span.cell {
+  height:20px;
+  width: 20px;
+  display: inline-block;
+}
+
+span.control {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+div.controls, div.grid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.row {
+  height: 20px;
+}
+
+button {
+  background-color: white;
+  border: black solid 2px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
