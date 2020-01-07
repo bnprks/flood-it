@@ -165,7 +165,7 @@
                      Your blob starts in the top left corner of the board, and you can grow
                      by matching the color of the surrounding squares.
                      Click one of the boxes in the color palette to get started.
-                     Try to make it in uder 25 moves!"]
+                     Try to make it in under 25 moves!"]
                 [:p [:small "This is not my original game idea. It is a blatant
                   rip-off of the game Flood-It! by Lab Pixes available on "]
                   [:a {:href "https://play.google.com/store/apps/details?id=com.labpixies.flood&hl=en"}
